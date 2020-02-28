@@ -1,3 +1,4 @@
+
 .jumbotron {
     background-image: url('https://picsum.photos/2000/1000');
     height: 500px;
@@ -12,6 +13,7 @@
     flex-wrap: wrap;
     padding: 10 4px;
   }
+  
 
   .column {
     flex: 50%;
@@ -26,6 +28,7 @@
   }
  body{
      background-color: beige;
+     
  }
  
 
@@ -43,4 +46,7 @@
       max-width: 100%;
     }
   }
-  
+
+  html {
+    font-family: GillSans, Calibri, Trebuchet, sans-serif;
+ }
