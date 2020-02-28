@@ -11,7 +11,8 @@ Samuel Aronda
 
 
 ## DB diagram
-![](images/PhotoGallery.png)
+![PhotoGallery ](https://user-images.githubusercontent.com/31355212/75525228-867cca80-5a20-11ea-8ac9-2ddb03799afb.png)
+
 
 # Installation
 
