@@ -1,0 +1,46 @@
+.jumbotron {
+    background-image: url('https://picsum.photos/2000/1000');
+    height: 500px;
+}
+.header {
+    position: relative;
+    bottom: -200px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10 4px;
+  }
+
+  .column {
+    flex: 50%;
+    padding: 10px;
+  }
+
+  .column img {
+    margin-top: 8px;
+    vertical-align: middle;
+    padding: 50px;
+    width: auto;
+  }
+ body{
+     background-color: beige;
+ }
+ 
+
+ @media screen and (max-width: 800px) {
+    .column {
+      flex: 50%;
+      max-width: 50%;
+    }
+  }
+  
+ 
+  @media screen and (max-width: 600px) {
+    .column {
+      flex: 100%;
+      max-width: 100%;
+    }
+  }
+  
