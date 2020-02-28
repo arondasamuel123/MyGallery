@@ -10,6 +10,8 @@ This a web application built using Python, Django and Postgresql.The app allows 
 Samuel Aronda
 
 
+## DB diagram
+![](images/PhotoGallery.png)
 
 # Installation
 
