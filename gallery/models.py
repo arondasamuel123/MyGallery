@@ -1,6 +1,39 @@
 from django.db import models
 
 
+class Category(models.Model):
+    image_category = models.CharField(max_length=20)
+    def save_category(self):
+        self.save()
+    def delete_category(self):
+        self.delete()
+    @classmethod
+    def get_cat_by_ID(cls, id):
+        cat = Category.objects.get(pk=id)
+        return cat
+    
+    def update_cat(self, updated_category):
+        self.image_category = updated_category
+        self.save()
+        
+           
+class Location(models.Model):
+    image_location = models.CharField(max_length=20)
+    
+    def save_location(self):
+        self.save()
+    
+    def delete_location(self):
+        self.delete()
+    @classmethod
+    def get_loc_by_ID(cls, id):
+        location = Location.objects.get(pk=id)
+        return location
+    
+    def update_loc(self,updated_pinpoint):
+        self.image_location = updated_pinpoint
+        self.save()
+    
 class Image(models.Model):
     image_name = models.CharField(max_length=30)
     image_description = models.CharField(max_length=30)
@@ -12,22 +45,29 @@ class Image(models.Model):
         self.save()
         
     def delete_image(self):
-        self.delete
+        self.delete()
+    @classmethod  
+    def get_image_by_id(cls, id):
+        image = cls.objects.filter(id=id).all()
+        return image
         
-    def get_image_by_id(self, image_id):
-        self.objects.get(id= image_id)
-        
-    def search_image(self,search_term):
-        images = self.objects.filter(category__icontains=search_term)
+    @classmethod
+    def update_image(cls, id, image_name, image_description, category, location):
+        update_img = cls.objects.filter(id=id).update(image_name=image_name, image_description=image_description, category=category, location=location)
+        return update_img
+    
+    @classmethod
+    def search_by_category(cls, search_word):
+        images = cls.objects.filter(category__image_category__icontains=search_word)
         return images
-        
-    def filter_by_loc(self, loc):
-        image_loc = self.objects.filter(location= loc)
+    
+    @classmethod
+    def filter_by_location(cls, loc):
+        images_loc = cls.objects.filter(location__id=loc)
+        return images_loc
+
+    
         
         
     
-class Category(models.Model):
-    category = models.CharField(max_length=20)
-    
-class Location(models.Model):
-    loction = models.CharField(max_length=20)
+
