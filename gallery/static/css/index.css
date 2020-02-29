@@ -8,24 +8,26 @@
     bottom: -200px;
 }
 
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+/* Clear floats after image containers */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
 .row {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 10 4px;
-  }
-  
+  display: flex;
+}
 
-  .column {
-    flex: 50%;
-    padding: 10px;
-  }
-
-  .column img {
-    margin-top: 8px;
-    vertical-align: middle;
-    padding: 50px;
-    width: auto;
-  }
+.column {
+  flex: 33.33%;
+  padding: 5px;
+}
  body{
      background-color: beige;
      
@@ -47,6 +49,6 @@
     }
   }
 
-  html {
-    font-family: GillSans, Calibri, Trebuchet, sans-serif;
+  h1 {
+    font-family: GillSans, sans-serif;
  }

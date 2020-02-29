@@ -9,26 +9,17 @@
 </div>
 </div>
 <div class="container">
+
 <div class="row">
+  {%for img in images %}
     <div class="column">
       <a href="">
-      <img alt="IMAGE" src="https://picsum.photos/id/1/200/300">
+      <img alt="IMAGE" src="{{img.image.url}}">
     </a>
-      <img alt="IMAGE" src="https://picsum.photos/id/3/200/300">
-      <img alt="IMAGE" src="https://picsum.photos/id/4/200/300">
-      <img alt="IMAGE" src="https://picsum.photos/id/10/200/300">
-      <img alt="IMAGE" src="https://picsum.photos/id/20/200/300">
-      <img alt="IMAGE" src="https://picsum.photos/id/1/200/300">
-      <img alt="IMAGE" src="https://picsum.photos/id/1/200/300">
-      <img alt="IMAGE" src="https://picsum.photos/id/1/200/300">
-      <img alt="IMAGE" src="https://picsum.photos/id/1/200/300">
-      <img alt="IMAGE" src="https://picsum.photos/id/1/200/300">
-      <img alt="IMAGE" src="https://picsum.photos/id/1/200/300">
-      <img alt="IMAGE" src="https://picsum.photos/id/10/200/300">
-
-      
     </div>
-    </div>
+    
+  {%endfor%}
+</div>
 </div>
 </div>
 {%endblock%}
