@@ -15,7 +15,8 @@ class Category(models.Model):
     def update_cat(self, updated_category):
         self.image_category = updated_category
         self.save()
-        
+    class Meta:
+        ordering =['image_category']
            
 class Location(models.Model):
     image_location = models.CharField(max_length=20)
@@ -33,6 +34,8 @@ class Location(models.Model):
     def update_loc(self,updated_pinpoint):
         self.image_location = updated_pinpoint
         self.save()
+    class Meta:
+        ordering = ['image_location']
     
 class Image(models.Model):
     image_name = models.CharField(max_length=30)
