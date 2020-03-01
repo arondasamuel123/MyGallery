@@ -13,13 +13,27 @@
 <div class="row">
   {%for img in images %}
     <div class="column">
-      <a href="">
+      <a data-target= "{{img.id}}" class="modal-trigger" href="#{{img.id}}" >
       <img alt="IMAGE" src="{{img.image.url}}">
     </a>
     </div>
     
+    <div id="{{img.id}}" class="modal">
+    <div class="modal-content">
+      <h4>{{img.image_name}}</h4>
+      <p>{{img.image_description}}</p>
+      <img src="{{img.image.url}}" width="30%">
+    </div>
+    <div class="modal-footer">
+      
+    </div>
+  </div>
   {%endfor%}
 </div>
 </div>
 </div>
+
+
+
 {%endblock%}
+
