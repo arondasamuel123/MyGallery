@@ -22,3 +22,8 @@ def filter_by_loc(request, img_location):
     images = Image.filter_by_location(img_location)
     message =f"{loc.image_location}"
     return render(request, 'location.html',{"images":images, "message":message})
+
+def specific_image(request, id):
+    image = Image.get_image_by_id(id)
+    
+    return render(request, 'image.html', {"image":image})
