@@ -49,6 +49,13 @@
     }
   }
 
+  @media screen and (max-width: 375px) {
+    .column img {
+      flex: 100%;
+      max-width: 100%;
+    }
+  }
+
   h1 {
     font-family: GillSans, sans-serif;
  }
