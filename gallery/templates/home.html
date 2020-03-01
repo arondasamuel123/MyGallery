@@ -36,8 +36,8 @@
       <img src="{{img.image.url}}" width="30%">
     </div>
     <div class="modal-footer left-align">
-      <input type="text" value="{{img.image.url}}" id="myInput">
-<button class="btn blue" onclick="myFunction()">Copy link</button>
+      <input hidden type="text" value="127.0.0.1:8000{{img.image.url}}" id="myInput">
+      <button class="btn blue" onclick="myFunction()">Copy link</button>
     </div>
   </div>
   {%endfor%}
