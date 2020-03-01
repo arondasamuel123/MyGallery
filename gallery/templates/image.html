@@ -15,9 +15,9 @@
             {% for img in image %}
       <div class="col-sm-6 col-md-3">
           <h3 style="color: green;">{{img.image_name}}</h3>
-          <h3 style="color: green;">{{img.image_description}}</h3>
-          <h3 style="color: green;">{{img.category.image_category}}</h3>
-          <h3 style="color: green;">{{img.location.image_location}}</h3>
+          <h4 style="color: green;">{{img.image_description}}</h4>
+          <h4 style="color: green;">{{img.category.image_category}}</h4>
+          <h4 style="color: green;">{{img.location.image_location}}</h4>
           <img src="{{img.image.url}}" width="50%">
       </div>
     {% endfor %}
