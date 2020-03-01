@@ -34,13 +34,7 @@ class ImageTestClass(TestCase):
         self.image_one.save_image()
         images = Image.get_image_by_id(self.image_one.id)
     
-    # def test_update_img(self):
-    #     self.category_one.save_category()
-    #     self.location_one.save_location()
-    #     self.image_one.save_image()
-    #     self.image_one.update_image(self.image_one.id, 'Blue Skies','Photo of the Sky',category=self.category_one, location=self.location_one)
-    #     print(self.image_one)
-    #     self.assertTrue(self.image_one.image_name=='Blue Skies')
+    
     
     def test_seach_by_cat(self):
         self.category_one.save_category()

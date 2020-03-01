@@ -54,10 +54,14 @@ class Image(models.Model):
         image = cls.objects.filter(id=id).all()
         return image
         
-    @classmethod
-    def update_image(cls, id, image_name, image_description, category, location):
-        update_img = cls.objects.filter(id=id).update(image_name=image_name, image_description=image_description, category=category, location=location)
-        return update_img
+    
+    def update_image(self, id, image_name, image_description, category, location):
+        self.id = id
+        self.image_name = image_name
+        self.image_description = image_description
+        self.category = category
+        self.location = location
+        self.save()
     
     @classmethod
     def search_by_category(cls, search_word):
