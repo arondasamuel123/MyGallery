@@ -56,6 +56,39 @@
     }
   }
 
+  @media screen and (max-width: 411px) {
+    .column img {
+      flex: 100%;
+      max-width: 100%;
+    }
+  }
+
+  @media screen and (max-width: 414px) {
+    .column img {
+      flex: 100%;
+      max-width: 100%;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .column img {
+      flex: 100%;
+      max-width: 100%;
+    }
+  }
+
+  @media screen and (max-width: 320px) {
+    a {
+      font-size: medium;
+    }
+    h3 {
+      font-size: small;
+    }
+    .nav-wrapper  {
+      font-size: small;
+    }
+  }
+
   h1 {
     font-family: GillSans, sans-serif;
  }
