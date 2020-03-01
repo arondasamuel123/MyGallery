@@ -34,7 +34,13 @@ class ImageTestClass(TestCase):
         self.image_one.save_image()
         images = Image.get_image_by_id(self.image_one.id)
     
-    
+    def test_update_image(self):
+        self.category_one.save_category()
+        self.location_one.save_location()
+        self.image_one.save_image()
+        self.image_one.get_image_by_id(self.image_one.id)
+        self.image_one.update_img('Travel', 'Travelling in style')
+        self.assertTrue(self.image_one.image_name=='Travel')
     
     def test_seach_by_cat(self):
         self.category_one.save_category()

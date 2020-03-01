@@ -49,19 +49,19 @@ class Image(models.Model):
         
     def delete_image(self):
         self.delete()
+        
+    
+        
     @classmethod  
     def get_image_by_id(cls, id):
         image = cls.objects.filter(id=id).all()
         return image
         
-    
-    def update_image(self, id, image_name, image_description, category, location):
-        self.id = id
+    def update_img(self,image_name, image_description):
         self.image_name = image_name
         self.image_description = image_description
-        self.category = category
-        self.location = location
         self.save()
+    
     
     @classmethod
     def search_by_category(cls, search_word):
