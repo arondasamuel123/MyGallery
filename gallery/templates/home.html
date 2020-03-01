@@ -33,7 +33,9 @@
     <div class="modal-content">
       <h4>{{img.image_name}}</h4>
       <p>{{img.image_description}}</p>
+      <a href="/image/{{img.id}}">
       <img src="{{img.image.url}}" width="30%">
+      <a>
     </div>
     <div class="modal-footer left-align">
       <input hidden type="text" value="127.0.0.1:8000{{img.image.url}}" id="myInput">
