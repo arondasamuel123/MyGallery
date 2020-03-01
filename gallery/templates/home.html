@@ -3,6 +3,17 @@
 
 {%block content %}
 <div class="containerone">
+  <nav class="green">
+    
+    <div class="nav-wrapper">
+      {%for location in locations%}
+      <ul id="nav-mobile"class="right" >
+        <li><a href="filter/{{location.id}}">{{location.image_location}}</a></li>
+      </ul>
+      {%endfor%}
+    </div>
+    
+  </nav>
 <div class="jumbotron">
 <div class="header">
 <h1 align="center" style="color: greenyellow;">WELCOME TO MY GALLERY</h1>
@@ -14,7 +25,7 @@
   {%for img in images %}
     <div class="column">
       <a data-target= "{{img.id}}" class="modal-trigger" href="#{{img.id}}" >
-      <img alt="IMAGE" src="{{img.image.url}}">
+      <img class="repsonsive-img" alt="IMAGE" src="{{img.image.url}}">
     </a>
     </div>
     
@@ -24,8 +35,9 @@
       <p>{{img.image_description}}</p>
       <img src="{{img.image.url}}" width="30%">
     </div>
-    <div class="modal-footer">
-      
+    <div class="modal-footer left-align">
+      <input type="text" value="{{img.image.url}}" id="myInput">
+<button class="btn blue" onclick="myFunction()">Copy link</button>
     </div>
   </div>
   {%endfor%}

@@ -6,7 +6,8 @@ from .import views
 
 urlpatterns  = [
     path('', views.index, name='index'),
-    path('search/', views.search_images, name='search_images')
+    path('search/', views.search_images, name='search_images'),
+    path('filter/<int:img_location>', views.filter_by_loc, name='filter_loc')
 ]
 
 if settings.DEBUG:
