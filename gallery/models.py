@@ -2,6 +2,9 @@ from django.db import models
 
 
 class Category(models.Model):
+    '''
+    Category model and methods
+    '''
     image_category = models.CharField(max_length=20)
     def save_category(self):
         self.save()
@@ -19,6 +22,9 @@ class Category(models.Model):
         ordering =['image_category']
            
 class Location(models.Model):
+    '''
+    Location model and methods
+    '''
     image_location = models.CharField(max_length=20)
     
     def save_location(self):
@@ -38,6 +44,9 @@ class Location(models.Model):
         ordering = ['image_location']
     
 class Image(models.Model):
+    '''
+    Image model and methods
+    '''
     image_name = models.CharField(max_length=30)
     image_description = models.CharField(max_length=30)
     image = models.ImageField(upload_to='gallery/', blank=True)

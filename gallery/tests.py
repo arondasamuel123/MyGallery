@@ -3,7 +3,7 @@ from .models import Image, Category, Location
 
 class ImageTestClass(TestCase):
     '''
-    Test Class for model methods 
+    Test Class for Image model methods 
     '''
     def setUp(self):
         self.category_one = Category(image_category='Nature')
@@ -57,6 +57,9 @@ class ImageTestClass(TestCase):
         self.assertTrue(len(images) > 0)
         
 class CategoryTestClass(TestCase):
+    '''
+    Test Class for Category model methods
+    '''
     def setUp(self):
         self.category = Category(image_category='Nature')
         
@@ -80,6 +83,9 @@ class CategoryTestClass(TestCase):
         
         
 class LocationTestClass(TestCase):
+    '''
+    Test Class for Location modal and methods
+    '''
     def setUp(self):
         self.location = Location(image_location='Karen')
     
