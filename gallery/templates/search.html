@@ -1,0 +1,33 @@
+{%extends 'index.html'%}
+{%block content%}
+<div class="container">
+    <div class="row">
+        <div class="col s12">
+
+            {% if images%}
+      <h2 style="color: greenyellow;">Found {{ images|length }} of searched term {{message}}</h2>
+    {% else %}
+      <h2 style="color: greenyellow;"> 0 images found {{message}}</h2>
+    {% endif %}
+        </div>
+
+    </div>
+
+    <div class="row">
+        {%if images %}
+        <div class="col s12">
+            {% for img in images %}
+      <div class="col-sm-6 col-md-3">
+          <h1>{{img.image_name}}</h1>
+          <img src="{{img.image.url}}">
+      </div>
+    {% endfor %}
+  {% endif %}
+        </div>
+        
+    </div>
+
+
+</div>
+
+{%endblock%}

@@ -1,9 +1,9 @@
  <nav class="green">
     <div class="nav-wrapper">
       <a href="/" class="brand-logo center">MY GALLERY</a>
-      <form>
+      <form method="GET" action="{%url 'search_images'%}">
         <div class="input-field">
-          <input id="search" type="search" required>
+          <input id="search" type="search" name="image"required>
           <label class="label-icon" for="search"><i class="material-icons">search</i></label>
           <i class="material-icons">close</i>
         </div>
